@@ -68,19 +68,16 @@
             "required": false
         }
     },
-buildpacks": [
-        {
-            "url": "heroku/python"
-        },
-        {
-            "url": "heroku/nodejs"
-        },
-        {
-            "url": "https://github.com/GGz11/SOURCE-STAR.git"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        }
-    ],
-    "stack": "container"
-}
+"buildpacks": [
+    {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
+} 
